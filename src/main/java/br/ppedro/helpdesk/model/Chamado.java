@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,11 +32,11 @@ public class Chamado implements Serializable {
 	private String titulo;
 	private String observacoes;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "tecnico_id")
 	private Tecnico tecnico;
 	
@@ -47,6 +48,7 @@ public class Chamado implements Serializable {
 
 	public Chamado(Integer id, Prioridade prioridade, Status status, String titulo, String observacoes, Cliente cliente,
 			Tecnico tecnico) {
+		super();
 		this.id = id;
 		this.prioridade = prioridade;
 		this.status = status;

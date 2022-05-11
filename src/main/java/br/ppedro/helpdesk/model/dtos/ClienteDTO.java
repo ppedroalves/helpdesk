@@ -13,9 +13,9 @@ import org.hibernate.validator.constraints.br.CPF;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import br.ppedro.helpdesk.model.Perfil;
-import br.ppedro.helpdesk.model.Tecnico;
+import br.ppedro.helpdesk.model.Cliente;
 
-public class TecnicoDTO implements Serializable {
+public class ClienteDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -34,13 +34,13 @@ public class TecnicoDTO implements Serializable {
 	protected LocalDate dataCriacao = LocalDate.now();
 	
 	
-	public TecnicoDTO() {
+	public ClienteDTO() {
 		super();
 		addPerfil(Perfil.CLIENTE);
 	}
 
 
-	public TecnicoDTO(Tecnico obj) {
+	public ClienteDTO(Cliente obj) {
 		super();
 		this.id = obj.getId();
 		this.nome = obj.getNome();
