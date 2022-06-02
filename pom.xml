@@ -72,13 +72,7 @@
 
 		<!-- Adiciona a dependência do JasperReports -->
 		<!-- Adiciona a dependência do JasperReports -->
-		<dependency>
-			<groupId>net.sf.jasperreports</groupId>
-			<artifactId>jasperreports</artifactId>
-			<version>6.16.0</version>
-		</dependency>
-
-
+		
 
 		<!-- Adiciona dependências para facilitar o desenvolvimento -->
 		<dependency>
